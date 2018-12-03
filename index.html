@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Crossfilter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="static/script.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Crossfilter Example</h1>
+        <p class="lead">This is a simple crossfilter example, where one can <b>fetch</b>, <b>filter</b> & <b>sort</b> the data</p>
+        <hr class="my-4">
+        <p>It uses <b><i>crossfilter.js</i></b> library</p>
+    </div>
+    <div class="input-group mb-3">
+        &nbsp;
+        <div class="input-group-prepend">
+            <span class="input-group-text">Patient Name</span>
+        </div>
+        <input type="text" class="form-control" id="patientNameSearch">
+        &nbsp;
+        <div class="input-group-prepend">
+            <span class="input-group-text">Test Name</span>
+        </div>
+        <input type="text" class="form-control" id="testNameSearch">
+        &nbsp;
+        <div class="input-group-prepend">
+            <span class="input-group-text">Sample Date</span>
+        </div>
+        <input type="text" class="form-control" id="sampleDateSearch">
+        &nbsp;
+        <div class="input-group-prepend">
+            <span class="input-group-text">Report Id</span>
+        </div>
+        <input type="text" class="form-control" id="reportIdSearch">
+        &nbsp;
+        <div class="input-group-prepend">
+            <span class="input-group-text">Test Id</span>
+        </div>
+        <input type="text" class="form-control" id="testIdSearch">
+        &nbsp;
+    </div>
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col" onclick="sortData(reportIdDim)">#</th>
+            <th scope="col" onclick="sortData(pNameDim)">Patient Name</th>
+            <th scope="col" onclick="sortData(tNameDim)">Test Name</th>
+            <th scope="col" onclick="sortData(tIdDim)">Test ID</th>
+            <th scope="col" onclick="sortData(sampleDateDim)">Sample Date</th>
+        </tr>
+    </thead>
+    <tbody id="dataId"></tbody>
+</table>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body>
+</html>
